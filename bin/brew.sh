@@ -130,7 +130,7 @@ if [[ ! -d $ST3 ]]; then
     readp "Install default Sublime Text 3 settings (y/N)? " RESPONSE;
     if [[ "$RESPONSE" == "y" ]]; then
        info "Copying default settings";
-       cp -rv ../config/Sublime\ Text\ 3 $ST3;
+       cp -R -v ../config/Sublime\ Text\ 3/ "$ST3";
     fi
 else 
   warn "No files copied. Target directory exists: $ST3";
