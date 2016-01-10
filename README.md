@@ -15,6 +15,7 @@ curl -s https://raw.githubusercontent.com/sraeburn/dotfiles/master/bin/bootstrap
 Shortened alternative: 
 ```bash
 curl -sL https://goo.gl/beoVOr | bash
+```
 
 ## Update 
 
