@@ -12,6 +12,9 @@ The first (optional) bash parameter indicates the target directory to install th
 ```bash
 curl -s https://raw.githubusercontent.com/sraeburn/dotfiles/master/bin/bootstrap.sh | bash
 ```
+Shortened alternative: 
+```bash
+curl -sL https://goo.gl/beoVOr | bash
 
 ## Update 
 
