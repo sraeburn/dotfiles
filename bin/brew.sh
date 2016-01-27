@@ -32,6 +32,7 @@ casks=(
   hazel
   java
   path-finder
+  skype
   sourcetree
   sublime-text3
 )
