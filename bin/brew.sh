@@ -11,23 +11,29 @@ h1 "Homebrew";
 
 # Packages to install
 brews=(
+	ant
+	heroku-toolbelt
+	maven
+	mongodb
+	perforce
+	tomcat
   git
   node
-  z
   wget
+  z
 )
 
 casks=(
   1password
-  bitcasa
   dropbox
+  eclipse-jee
   evernote
-  flash
   google-chrome
   hazel
-  sublime-text3
-  sourcetree
+  java
   path-finder
+  sourcetree
+  sublime-text3
 )
 
 # charles crashplan deltawalker disk-inventory-x eclipse-jee heroku-toolbelt kaleidoscope logitech-myharmony mamp microsoft-office omnifocus omnigraffle transmit vmware-fusion
@@ -71,7 +77,7 @@ if [[ $RET -ne 0 ]]; then
     install_homebrew
   fi
 else
-  echo "Homebrew is already installed, skipping install."
+  echo "Homebrew is already installed. Updating existing installation."
   brew update;
 fi
 
