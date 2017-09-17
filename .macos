@@ -204,7 +204,7 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots to the desktop
-defaults write com.apple.screencapture location -string "${HOME}/Dropbox/Screenshots"
+defaults write com.apple.screencapture location -string "${HOME}/Dropbox (Personal)/Screenshots"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
@@ -334,6 +334,12 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 	OpenWith -bool true \
 	Privileges -bool true
 
+
+# Add favorites to sidebar
+sfltool add-item com.apple.LSSharedFileList.FavoriteItems file:///${HOME}/Dropbox%20\(Personal\)/Inbox/
+sfltool add-item com.apple.LSSharedFileList.FavoriteItems file:///${HOME}/Code/
+
+
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
@@ -430,6 +436,12 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 # Bottom left screen corner → Start screen saver
 #defaults write com.apple.dock wvous-bl-corner -int 5
 #defaults write com.apple.dock wvous-bl-modifier -int 0
+
+# Add persistent applications to the Dock
+for app in {"Google Chrome","Sublime Text","Utilities/Terminal"}.app; do
+	defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>";
+done;
+unset app;
 
 ###############################################################################
 # Safari & WebKit                                                             #
