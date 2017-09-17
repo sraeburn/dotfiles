@@ -3,7 +3,7 @@
 # Install command-line tools using Homebrew.
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Script to uninstall Homebrew, in case you ever need it. 
+# Script to uninstall Homebrew, in case you ever need it.
 # ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
 
 # Make sure we’re using the latest Homebrew.
@@ -27,6 +27,7 @@ brew upgrade
 # running `chsh`.
 # brew install bash
 # brew install bash-completion2
+brew install z
 
 # Switch to using brew-installed bash as default shell
 # if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
@@ -82,8 +83,8 @@ brew upgrade
 # Install other useful binaries.
 # brew install ack
 #brew install exiv2
-# brew install git
-# brew install git-lfs
+brew install git
+brew install git-lfs
 # brew install imagemagick --with-webp
 # brew install lua
 # brew install lynx
@@ -96,6 +97,15 @@ brew upgrade
 # brew install tree
 # brew install vbindiff
 # brew install zopfli
+
+# Install applications
+brew cask install sourcetree
+brew cask install sublime-text
+brew cask install webstorm
+brew cask install google-chrome
+brew cask install dropbox
+brew cask install 1password
+brew cask install sizeup
 
 # Remove outdated versions from the cellar.
 brew cleanup
