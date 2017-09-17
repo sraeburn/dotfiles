@@ -47,5 +47,10 @@ complete -W "NSGlobalDomain" defaults;
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
-# Enable Z (https://github.com/rupa/z)
-. /usr/local/etc/profile.d/z.sh
+# Enable z command
+# https://github.com/rupa/z
+ZSCRIPT=`brew --prefix`/etc/profile.d/z.sh;
+if [ -f $ZSCRIPT ];
+then
+	source $ZSCRIPT;
+fi;
