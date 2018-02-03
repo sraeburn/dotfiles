@@ -106,6 +106,7 @@ brew cask install google-chrome
 brew cask install dropbox
 brew cask install 1password
 brew cask install sizeup
+brew cask install hazel
 
 # Remove outdated versions from the cellar.
 brew cleanup
